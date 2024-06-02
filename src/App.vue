@@ -1,28 +1,16 @@
-<script>
+<script setup>
 
 import { ref } from 'vue';
 
-export default {
+const count = ref(1);
 
-  setup() {
-    const count = ref(1);
+const increase = () => {
+  count.value++;
+}
 
-    const increase = () => {
-      count.value++;
-    }
-
-    const decrease = () => {
-      count.value--;
-    }
-
-    return {
-      count,
-      increase,
-      decrease
-    }
-  }
-
-};
+const decrease = () => {
+  count.value--;
+}
 
 </script>
 
